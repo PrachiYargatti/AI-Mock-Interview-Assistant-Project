@@ -30,9 +30,11 @@ app.use(
   cors({
     origin: [
       "http://localhost:5173",
-      process.env.CLIENT_URL,
+      "https://ai-mock-interview-assistant-project.vercel.app",
     ],
     credentials: true,
+    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+    allowedHeaders: ["Content-Type", "Authorization"],
   })
 );
 
